@@ -120,6 +120,18 @@ export const constantRoutes = [
     ]
   },
   {
+    path: '/add',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/add-plan/index'),
+        name: 'Add',
+        meta: { title: 'Add', icon: 'peoples', affix: true }
+      }
+    ]
+  },
+  {
     path: '/guide',
     component: Layout,
     redirect: '/guide/index',
